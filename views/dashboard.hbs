@@ -1,0 +1,28 @@
+<h6>Dashboard</h6>
+<h3>Logged in as {{name}}</h3>
+{{#if jobs}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>Poster</th>
+                <th>Email</th>
+                <th>Post Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each jobs}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{stripTags body}}</td>
+                    <td>{{user.displayName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{formatDate createdAt 'LLL'}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <p>No current job listings! Check back later!</p>
+{{/if}}
