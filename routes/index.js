@@ -15,22 +15,19 @@ router.get('/', ensureGuest, (req, res) => {
 // @desc    Dashboard
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
-    if (req.user.student) {
-        try {
-            const jobs = await Job.find({ status: 'open' })
-                .populate('user')
-                .sort({createdAt: 'desc'})
-                .lean()
-            res.render('dashboard', {
-                name: req.user.displayName,
-                jobs
-            })
-        } catch (err) {
-            console.error(err)
-
-        }
-    } else {
-        res.redirect('/jobs')
+    try {
+        const jobs = await Job.find({ status: 'open' })
+            .populate('user')
+            .sort({createdAt: 'desc'})
+            .lean()
+        console.log(req.user.student)
+        res.render('dashboard', {
+            name: req.user.displayName,
+            student: req.user.student,
+            jobs
+        })
+    } catch (err) {
+        console.error(err)
     }
 
 
