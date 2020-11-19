@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars')
 const methodOverride = require('method-override')
 const passport = require('passport')
 const session = require('express-session')
+const enforce = require('express-sslify');
 const MongoStore = require('connect-mongo')(session)
 const connectDB = require('./config/db')
 
@@ -23,6 +24,7 @@ const app = express()
 // Body parser
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
+app.use(enforce.HTTPS({ trustProtoHeader: true }))
 
 //Method Override
 app.use(methodOverride(function (req, res) {
