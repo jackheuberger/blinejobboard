@@ -8,10 +8,6 @@ p {
     text-align: center;
 }
 
-.btn {
-    margin: 5px;
-}
-
 table{
     table-layout: fixed;
 }
@@ -22,4 +18,8 @@ table td, table td * {
 
 td{
     word-wrap:break-word
+}
+
+.desc{
+    width: 1000px;
 }

@@ -1,0 +1,29 @@
+<div>
+    {{#if jobs}}
+        <table class="table table-striped">
+            <thead>
+                <tr class="text-center">
+                    <th>Title</th>
+                    <th>Post Date</th>
+                    <th>Status</th>
+                    <th>Change Status</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each jobs}}
+                <tr class="text-center">
+                    <td><a href="/jobs/edit/{{_id}}">{{title}}</a></td>
+                    <td>{{formatDate createdAt 'LLL'}}</td>
+                    <td style="text-transform: capitalize;">{{status}}</td>
+                    <td><a href="/jobs/status/{{_id}}"><i class="fas fa-adjust"></i></a></td>
+                    <td><i class="fas fa-times-circle"></i></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <h1>No jobs</h1>
+    {{/if}}
+    <a class="btn btn-primary" href="/jobs/add" role="button">Create New</a>
+</div>
