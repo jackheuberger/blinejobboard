@@ -3,13 +3,12 @@ p {
 }
 
 .login-container {
-    width: 500px;
     margin-top: 50px;
     text-align: center;
 }
 
 .card {
-    height: 200px;
+    max-width: 50%;
 }
 
 table{
@@ -21,7 +20,7 @@ table td, table td * {
 }
 
 td{
-    word-wrap:break-word
+    word-wrap: break-word;
 }
 
 .desc{
