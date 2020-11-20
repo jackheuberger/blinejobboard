@@ -19,11 +19,7 @@ const JobSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-    },
-    createdAt: {
-        type: Date,
-        defualt: Date.now
     }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model('Job', JobSchema)

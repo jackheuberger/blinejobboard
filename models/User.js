@@ -16,10 +16,6 @@ const UserSchema = new mongoose.Schema({
     student: {
         type: Boolean,
         default: false
-    },
-    createdAt: {
-        type: Date,
-        defualt: Date.now
     }
 })
 

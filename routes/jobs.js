@@ -7,7 +7,6 @@ const Job = require('../models/Job')
 // @desc    Show page of current jobs posted by this user
 // @route   GET /jobs
 router.get('/', ensureAuth, async (req, res) => {
-    //CHANGE TO DELETE VIEW
     try{
         const jobs = await Job.find({ user: req.user })
             .populate('user')
@@ -38,7 +37,7 @@ router.post('/add', ensureAuth, async (req, res) => {
     try {
         req.body.user = req.user.id
         await Job.create(req.body)
-        res.redirect('/')
+        res.redirect('/jobs')
     } catch (err) {
         console.error(err)
         res.render('error/500')
@@ -46,7 +45,7 @@ router.post('/add', ensureAuth, async (req, res) => {
 })
 
 // @desc    Show edit page
-// @route   POST /jobs/edit/:id
+// @route   GET /jobs/edit/:id
 router.get('/edit/:id', ensureAuth, async (req, res) => {
     const job = await Job.findOne({ 
         _id: req.params.id
@@ -69,6 +68,7 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
 // @route   PUT /jobs/:id
 router.put('/:id', ensureAuth, async (req, res) => {
     try {
+        
         let job = await Job.findById(req.params.id).lean()
 
         if(!job) {
@@ -78,11 +78,11 @@ router.put('/:id', ensureAuth, async (req, res) => {
         if(job.user != req.user.id){
             res.redirect('/')
         } else {
-            job = await Job.findOneAndUpdate({ _id: req.params.id }, req.body, {
+            job = await Job.findByIdAndUpdate({ _id: req.params.id }, req.body, {
                 new: true,
                 runValidators: true
             })
-            res.redirect('/')
+            res.redirect('/jobs')
         }
     } catch (err) {
         console.error(err)
@@ -90,6 +90,20 @@ router.put('/:id', ensureAuth, async (req, res) => {
     }
 })
 
+// @desc    Delete job listing
+// @route   DELETE /jobs/:id
+router.delete('/:id', ensureAuth, async (req, res) => {
+    try {
+        await Job.remove({ _id: req.params.id })
+        res.redirect('/jobs')
+    } catch (error) {
+        console.error(err)
+        return res.render('error/500')
+    }
+})
+
+// @desc    Change job listing status
+// @route   PUT /jobs/status/:id
 router.get('/status/:id', ensureAuth, async (req, res) => {
     try {
         let job = await Job.findById(req.params.id).lean()
@@ -108,7 +122,7 @@ router.get('/status/:id', ensureAuth, async (req, res) => {
                 s.status = 'open'
             }
             job = await Job.findOneAndUpdate({ _id: req.params.id }, s) 
-            res.redirect('/')
+            res.redirect('/jobs')
         }
     } catch (err) {
         console.error(err)

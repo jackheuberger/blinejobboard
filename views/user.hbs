@@ -1,4 +1,6 @@
 <div>
+    asdasdas
+
     {{#if jobs}}
         <table class="table table-striped">
             <thead>
@@ -17,7 +19,12 @@
                     <td>{{formatDate createdAt 'LLL'}}</td>
                     <td style="text-transform: capitalize;">{{status}}</td>
                     <td><a href="/jobs/status/{{_id}}"><i class="fas fa-adjust"></i></a></td>
-                    <td><i class="fas fa-times-circle"></i></td>
+                    <td>
+                        <form action="/jobs/{{_id}}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-times-circle"></i></button>
+                        </form>
+                    </td>
                 </tr>
                 {{/each}}
             </tbody>
