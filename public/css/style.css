@@ -8,6 +8,10 @@ p {
     text-align: center;
 }
 
+.card {
+    height: 200px;
+}
+
 table{
     table-layout: fixed;
 }
