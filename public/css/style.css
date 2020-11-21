@@ -15,10 +15,6 @@ table{
     table-layout: fixed;
 }
 
-table td, table td * {
-    vertical-align: top;
-}
-
 td{
     word-wrap: break-word;
 }
