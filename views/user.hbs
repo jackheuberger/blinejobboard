@@ -15,7 +15,7 @@
                 <tr class="text-center">
                     <td><a href="/jobs/edit/{{_id}}">{{title}}</a></td>
                     <td>{{formatDate createdAt 'LLL'}}</td>
-                    <td style="text-transform: capitalize;">{{status}}</td>
+                    <td class="poster">{{status}}</td>
                     <td><a href="/jobs/status/{{_id}}"><i class="fas fa-adjust"></i></a></td>
                     <td>
                         <form action="/jobs/{{_id}}" method="post">

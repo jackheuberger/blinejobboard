@@ -2,41 +2,41 @@
     <h6>Dashboard</h6>
     <h3>Logged in as {{name}}
         {{#if student}}
-            in a Student account!
+        in a Student account!
         {{else}}
-            in a Non-Student account!
+        in a Non-Student account!
         {{/if}}
     </h3>
     {{#if jobs}}
-        <table class="table table-striped table-hover table-md table-responsive-xl">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Body</th>
-                    <th>Poster</th>
-                    <th>Contact Email</th>
-                    <th>Post Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each jobs}}
-                    <tr>
-                        <td>{{title}}</td>
-                        <td class="desc">{{stripTags body}}</td>
-                        <td>{{user.displayName}}</td>
-                        <td>
-                            {{#if ../student}}
-                                {{user.email}}
-                            {{else}}
-                                Redacted - Not student
-                            {{/if}}
-                        </td>
-                        <td>{{formatDate createdAt 'LLL'}}</td>
-                    </tr>
-                {{/each}}
-            </tbody>
-        </table>
+    <table class="table table-striped table-hover table-md">
+        <thead>
+            <tr>
+                <th class="th-sm">Title</th>
+                <th class="th-lg">Body</th>
+                <th>Poster</th>
+                <th>Contact Email</th>
+                <th>Post Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each jobs}}
+            <tr>
+                <td>{{title}}</td>
+                <td class="desc">{{stripTags body}}</td>
+                <td>{{user.displayName}}</td>
+                <td>
+                    {{#if ../student}}
+                    {{user.email}}
+                    {{else}}
+                    Redacted - Not student
+                    {{/if}}
+                </td>
+                <td>{{formatDate createdAt 'LLL'}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
     {{else}}
-        <p>No current job listings! Check back later!</p>
+    <p>No current job listings! Check back later!</p>
     {{/if}}
 </div>
