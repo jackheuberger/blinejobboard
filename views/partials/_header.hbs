@@ -3,7 +3,9 @@
   <ul class="nav justify-content-end">
 
       <div class="btn-group">
-        <a class="btn btn-outline-primary my-2 my-sm-0" href="/auth/logout">Logout</a>
+        {{#if user}}
+          <a class="btn btn-outline-primary my-2 my-sm-0" href="/auth/logout">Logout</a>
+        {{/if}}
       </div>
       <div class="btn-group">
         <a class="btn btn-dark my-2 my-sm-0" href="https://github.com/jackheuberger/bhsjobboard"

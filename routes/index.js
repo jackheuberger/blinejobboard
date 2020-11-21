@@ -8,6 +8,7 @@ const Job = require('../models/Job')
 // @route   GET /
 router.get('/', ensureGuest, (req, res) => {
     res.render('login', {
+        user: false,
         layout: "login"
     })
 })
