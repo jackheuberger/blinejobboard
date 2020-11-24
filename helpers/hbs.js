@@ -6,5 +6,8 @@ module.exports = {
     },
     stripTags: function(input) {
         return input.replace(/<(?:.|\n)*?>/gm,'')
+    },
+    isOpen: function(input) {
+        return input == 'open'
     }
 }
