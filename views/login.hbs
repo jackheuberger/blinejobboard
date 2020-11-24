@@ -2,8 +2,37 @@
     <h1 class="card-title" style="padding-top: 20px;"><i class="fas fa-address-card"></i> BHS Job Board</h1>
     <h6 class="card-subtitle mb-2 text-muted">Post or find jobs meant for Brookline High students</h6>
     <div class="card-body">
-        <a href="/auth/google" class="btn btn-danger mt-auto" data-toggle="tooltip" title="Students, make sure to login with your school email!">
+        <a href="/auth/google" class="btn btn-danger mt-auto" data-toggle="tooltip"
+            title="Students, make sure to login with your school email!">
             <i class="fab fa-google"></i> &nbsp; Log In With Google
         </a>
+        </br>
+        </br>
+        <button style="margin-top: 5px;" class="btn btn-primary mt-auto" data-toggle="collapse"
+            data-target="#instructions">Instructions</button>
+    </div>
+
+    <div id="instructions" class="collapse container">
+        <div class="row">
+            <div class="col">
+                <h6>Students:</h6>
+                <ol>
+                    <li>Log in with your BHS Google Account</li>
+                    <li>Upon logging in, you'll be able to see all current job listings</li>
+                </ol>
+            </div>
+            <div class="col">
+                <h6>Employers:</h6>
+                <ol>
+                    <li>Log in with a Google Account</li>
+                    <li>Upon logging in, you'll be able to see all of your job listings.</li>
+                    <li>Click the "Create New" button to create a new job listing.</li>
+                    <li>Upon posting a listing, you should see it on your dashboard.</li>
+                    <li>The <i class="fas fa-adjust"></i> icon will switch the status of the posting. 
+                    "Open" means that it is visible to students. "Closed" means that the posting is hidden.</li>
+                    <li>The red button will delete the listing.</li>
+                </ol>
+            </div>
+        </div>
     </div>
 </div>

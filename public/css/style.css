@@ -7,6 +7,10 @@ p {
     text-align: center;
 }
 
+.collapse {
+    text-align: left;
+}
+
 body, .jumbotron {
     background-color: #ffffff;
 }
