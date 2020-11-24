@@ -20,8 +20,8 @@
         <tbody>
             {{#each jobs}}
             <tr>
-                <td>{{title}}</td>
-                <td class="desc">{{stripTags body}}</td>
+                <td><a href="/jobs/{{_id}}">{{title}}</a></td>
+                <td class="desc">{{truncateBody body}}</td>
                 <td>{{user.displayName}}</td>
                 <td>
                     {{#if ../student}}

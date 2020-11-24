@@ -43,10 +43,10 @@ if(process.env.NODE_ENV == 'development'){
 }
 
 //Handlebars Helpers
-const { formatDate, stripTags } = require('./helpers/hbs')
+const { formatDate, stripTags, truncateBody } = require('./helpers/hbs')
 
 //Handlebars
-app.engine('.hbs', exphbs({helpers:{formatDate, stripTags},defaultLayout: 'main', extname: '.hbs'}))
+app.engine('.hbs', exphbs({helpers:{formatDate, stripTags, truncateBody},defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', '.hbs')
 
 //Sessions
