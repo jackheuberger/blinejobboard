@@ -2,6 +2,7 @@
 
 - [BHSJobBoard](#bhsjobboard)
     - [About](#about)
+  - [How to Contribute](#how-to-contribute)
   - [Project Layout](#project-layout)
   - [What's Missing](#whats-missing)
   - [Hosting Locally](#hosting-locally)
@@ -9,7 +10,8 @@
 ### About
 I created this site to help students at my former high school find opportinities in the surrounding area. It is currently hosted at https://bhsjobs.herokuapp.com.
 
-If you see any problems with the site, please raise them in the Issues section of the Repo. Feel free to clone and create pull requests!
+## How to Contribute
+Feel free to raise issues or submit pull requests! Everything you need to get started should be in the [Hosting Locally](#hosting-locally) section. If you need help, raise it as an issue or email me: *jack at jackheuberger dot com*.
 
 ## Project Layout
 - ```app.js```
