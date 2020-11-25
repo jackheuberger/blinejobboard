@@ -1,20 +1,20 @@
 <header>
-<nav class="navbar navbar-light" style="background-color: #daf2f2;">
-  <span class="navbar-brand mb-0 h1" href="#">BHS Job Board</span>
-  <ul class="nav justify-content-end">
+  <nav class="navbar navbar-light" style="background-color: #daf2f2;">
+    <span class="navbar-brand mb-0 h1" href="#">BHS Job Board</span>
+    <ul class="nav justify-content-end">
       <div class="btn-group">
         {{#if user}}
-          <a class="btn btn-outline-primary my-2 my-sm-0" href="/auth/logout">Logout</a>
-          &nbsp;
+        <a class="btn btn-outline-primary my-2 my-sm-0" href="/auth/logout">Logout</a>
+        &nbsp;
         {{/if}}
       </div>
       <div class="btn-group">
-        <a class="btn btn-dark my-2 my-sm-0" href="https://github.com/jackheuberger/bhsjobboard"
-        target="_blank"><i class="fab fa-github"></i></a>
+        <a class="btn btn-dark my-2 my-sm-0" href="https://github.com/jackheuberger/bhsjobboard" target="_blank"
+          data-toggle="tooltip" title="Github"><i class="fab fa-github"></i></a>
         <a class="btn btn-dark my-2 my-sm-0" href="https://github.com/jackheuberger/bhsjobboard/blob/main/Feedback.md"
-        target="_blank"><i class="far fa-comments"></i></a>
+          target="_blank" data-toggle="tooltip" title="Feedback"><i class="far fa-comments"></i></a>
       </div>
-    </li>
-  </ul>
-</nav>
+      </li>
+    </ul>
+  </nav>
 </header>
