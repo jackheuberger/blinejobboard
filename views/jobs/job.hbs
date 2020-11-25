@@ -1,5 +1,11 @@
 <div class="container">
     <h3>Title: {{job.title}}</h3>
-    <h4>Posted by {{user.displayName}} at <a href="mailto:{{user.email}}">{{user.email}}</a></h4>
+    <h4>Posted by {{poster.displayName}}
+        {{#if currentUser.student}}
+            at <a href="mailto:{{poster.email}}">{{poster.email}}</a>
+        {{else}}    
+        {{/if}}
+        </h4>
     <p class="text-break">{{job.body}}</p>
+    <a href="/dashboard" class="btn btn-primary">Back</a>
 </div>

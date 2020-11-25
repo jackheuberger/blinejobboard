@@ -21,7 +21,6 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
             .populate('user')
             .sort({createdAt: 'desc'})
             .lean()
-        console.log(req.user.student)
         res.render('dashboard', {
             name: req.user.displayName,
             student: req.user.student,
