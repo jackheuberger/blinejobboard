@@ -69,9 +69,8 @@ router.get('/edit/:id', ensureAuth, async (req, res) => {
 // @route   GET /jobs/:id
 router.get('/:id', ensureAuth, async (req, res) => {
     try {
-        let currentUser = await Job.findById(req.params.id)
+        let currentUser = await User.findById(req.user.id).lean()
         let job = await Job.findById(req.params.id).lean()
-
         if(!job || !currentUser) {
             return res.render('error/404')
         } else {
@@ -89,6 +88,7 @@ router.get('/:id', ensureAuth, async (req, res) => {
 
     } catch (err) {
         console.error(err)
+        
         return res.render('error/500')
     }
 })
