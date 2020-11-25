@@ -47,7 +47,7 @@ Based on Traversy Media's [Node.JS App from Scratch](https://www.youtube.com/wat
 2. ```npm install``` and ```npm install -d``` to install reqired dependencies and dev dependencies
 3. in /config/, create a file named config.env. **Make sure this file is listed in the gitignore. This should not be published on Github.** This file should read:
     ```
-    PORT = 3000
+    PORT = 3000 //Optional. Defaults to 3000 if not specified.
     MONGO_URI = //MONGO URI HERE
     GOOGLE_CLIENT_ID = //GOOGLE CLIENT ID HERE
     GOOGLE_CLIENT_SECRET = //GOOGLE CLIENT SECRET HERE
