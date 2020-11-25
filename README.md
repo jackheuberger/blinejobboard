@@ -13,6 +13,9 @@ I created this site to help students at my former high school find opportinities
 ## How to Contribute
 Feel free to raise issues or submit pull requests! Everything you need to get started should be in the [Hosting Locally](#hosting-locally) section. If you need help, raise it as an issue or email me: *jack at jackheuberger dot com*.
 
+### How to Raise an Issue
+If you've never used github before, the "Issues" tab isn't just for problems, but is also used for suggestions and feature requests. If you don't have a github account but still want to suggest a feature/point out a bug, feel free to email me at *jack at jackheuberger dot com*.
+
 ## Project Layout
 - ```app.js```
   - Entrypoint. Defines package requirements, establishes middleware, starts Express server.
