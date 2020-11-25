@@ -3,6 +3,7 @@
 - [BHSJobBoard](#bhsjobboard)
     - [About](#about)
   - [How to Contribute](#how-to-contribute)
+    - [How to Raise an Issue](#how-to-raise-an-issue)
   - [Project Layout](#project-layout)
   - [What's Missing](#whats-missing)
   - [Hosting Locally](#hosting-locally)
