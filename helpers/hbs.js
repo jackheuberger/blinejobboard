@@ -2,7 +2,7 @@ const moment = require('moment-timezone')
 
 module.exports = {
     formatDate: function (date, format) {
-        return moment(date).tz('America/New_York').tformat(format)
+        return moment(date).tz('America/New_York').format(format)
     },
     stripTags: function (input) {
         return input.replace(/<(?:.|\n)*?>/gm, '')
