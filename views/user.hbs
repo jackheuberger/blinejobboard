@@ -1,35 +1,35 @@
 <div class="container text-center">
     {{#if jobs}}
     <h3>Your Job Listings:</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr class="text-center">
-                    <th>Title</th>
-                    <th>Post Date</th>
-                    <th>Status</th>
-                    <th>Change Status</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each jobs}}
-                <tr class="text-center">
-                    <td><a href="/jobs/edit/{{_id}}">{{title}}</a></td>
-                    <td>{{formatDate createdAt 'LLL'}}</td>
-                    <td class="poster">{{status}}</td>
-                    <td><a href="/jobs/status/{{_id}}"><i class="fas fa-adjust"></i></a></td>
-                    <td>
-                        <form action="/jobs/{{_id}}" method="post">
-                            <input type="hidden" name="_method" value="delete">
-                            <button type="submit" class="btn btn-danger"><i class="far fa-times-circle"></i></button>
-                        </form>
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
+    <table class="table table-striped">
+        <thead>
+            <tr class="text-center">
+                <th>Title</th>
+                <th>Post Date</th>
+                <th>Status</th>
+                <th>Change Status</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each jobs}}
+            <tr class="text-center">
+                <td><a href="/jobs/edit/{{_id}}">{{title}}</a></td>
+                <td>{{formatDate createdAt 'LLL'}}</td>
+                <td class="poster">{{status}}</td>
+                <td><a href="/jobs/status/{{_id}}"><i class="fas fa-adjust"></i></a></td>
+                <td>
+                    <form action="/jobs/{{_id}}" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                        <button type="submit" class="btn btn-danger"><i class="far fa-times-circle"></i></button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
     {{else}}
-            <h1>You haven't posted any jobs!</h1>
+    <h1>You haven't posted any jobs!</h1>
     {{/if}}
     <a class="btn btn-primary" href="/jobs/add" role="button">Create New</a>
     <a class="btn btn-primary" href="/dashboard" role="button">View All Listings</a>
