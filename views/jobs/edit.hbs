@@ -5,7 +5,7 @@
     <form action="/jobs/{{job._id}}" method="POST">
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
-            <label for="jobTitle">Job Title (100 char max)</label>
+            <label for="jobTitle">Job Title (100 character maximum)</label>
             <input type="text" class="form-control" id="jobTitle" name="title" value="{{job.title}}">
             <small id="jobTitle" class="form-text text-muted"></small>
         </div>
