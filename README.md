@@ -10,7 +10,7 @@
   - [Hosting Locally](#hosting-locally)
 
 ### About
-I created this site to help students at my former high school find opportinities in the surrounding area. It is currently hosted at https://bhsjobs.herokuapp.com.
+I created this site to help students at my former high school find opportinities in the surrounding area, and for some to get experience that I wish I had in contributing to open-source projects. It is currently hosted at https://bhsjobs.herokuapp.com.
 
 ## How to Contribute
 Feel free to raise issues or submit pull requests! Everything you need to get started should be in the [Hosting Locally](#hosting-locally) section. If you need help, raise it as an issue or email me: *jack at jackheuberger dot com*.
