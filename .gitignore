@@ -1,4 +1,5 @@
 /config/config.env
+/.vscode
 
 # Logs
 logs
