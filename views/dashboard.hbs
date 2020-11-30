@@ -15,7 +15,6 @@
                 <th class="th-sm">Title</th>
                 <th class="th-lg">Body</th>
                 <th>Poster</th>
-                <th>Contact Email</th>
                 <th>Post Date</th>
             </tr>
         </thead>
@@ -25,13 +24,6 @@
                 <td><a href="/jobs/{{_id}}">{{title}}</a></td>
                 <td class="desc">{{truncateBody (stripTags body)}}</td>
                 <td>{{user.displayName}}</td>
-                <td>
-                    {{#if ../student}}
-                    {{user.email}}
-                    {{else}}
-                    Redacted - Not student
-                    {{/if}}
-                </td>
                 <td>{{formatDate createdAt 'LLL'}}</td>
             </tr>
             {{/each}}
