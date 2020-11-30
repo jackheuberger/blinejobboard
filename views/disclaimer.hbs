@@ -1,0 +1,24 @@
+<div class="jumbotron">
+    <h1 class="display-4">DISCLAIMER:</h1>
+    <p>
+    Be aware that the jobs on this website <strong>have not</strong> been screened by Brookline High nor this website.
+    <ul>
+        <li><Strong>Research</Strong> potential businesses or employers on the internet to check their validity.</li>
+        <li><Strong>Call or Zoom</Strong> with potential employers before meeting in-person.</li>
+        <li>Postings made by private residents of the area that are looking for help from students should be screened by the students themselves.</li>
+        <li>It is often acceptable to meet on or near campus to ensure a safe meeting place.</li>
+        <li><Strong>Make sure you are comfortable with the type of work and capable of completing the work required</Strong>.</li>
+    </ul>
+    If you need help, reach out to a parent, guardian, or other trusted adult for assistance.
+    </p>
+    <button class="btn btn-primary" onclick="ask()">I understand</button>
+</div>
+
+<script>
+    function ask(){
+        if(confirm("Are you sure you've read the disclaimer?")){
+            console.log("Alert")
+            $(location).attr('href', '/dashboard')
+        }
+    }
+</script>

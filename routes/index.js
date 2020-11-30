@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const { ensureAuth, ensureGuest } = require('../middleware/auth')
+const {
+    ensureAuth,
+    ensureGuest
+} = require('../middleware/auth')
 
 const Job = require('../models/Job')
 
@@ -17,9 +20,13 @@ router.get('/', ensureGuest, (req, res) => {
 // @route   GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
     try {
-        const jobs = await Job.find({ status: 'open' })
+        const jobs = await Job.find({
+                status: 'open'
+            })
             .populate('user')
-            .sort({createdAt: 'desc'})
+            .sort({
+                createdAt: 'desc'
+            })
             .lean()
         res.render('dashboard', {
             name: req.user.displayName,
@@ -29,9 +36,9 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
     } catch (err) {
         console.error(err)
     }
-
-
-
 })
 
+router.get('/disclaimer', ensureAuth, (req, res) => {
+    res.render('disclaimer')
+})
 module.exports = router
