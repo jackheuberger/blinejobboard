@@ -1,4 +1,4 @@
-# BHSJobBoard
+# Brookline Student Job Board
 
 - [BHSJobBoard](#bhsjobboard)
     - [About](#about)
