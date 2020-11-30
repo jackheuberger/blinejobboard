@@ -1,6 +1,6 @@
 # Brookline Student Job Board
 
-- [BHSJobBoard](#bhsjobboard)
+- [Brookline Student Job Board](#brookline-student-job-board)
     - [About](#about)
   - [How to Contribute](#how-to-contribute)
     - [How to Raise an Issue](#how-to-raise-an-issue)
@@ -52,7 +52,7 @@ Git is the coding equivalent of the version history section of Google Drive. Git
 Based on Traversy Media's [Node.JS App from Scratch](https://www.youtube.com/watch?v=SBvmnHTQIPY) video.
 ## Hosting Locally
 1. Star and Fork this repository
-2. Use ```git clone https://github.com/{{USERNAME}}/bhsjobboard``` to clone the repo on your machine
+2. Use ```git clone https://github.com/{{USERNAME}}/blinejobboard``` to clone the repo on your computer
 3. Create a branch using ```git checkout -b {{BRANCH NAME}}```
 4. ```npm install``` and ```npm install -d``` to install reqired dependencies and dev dependencies
 5. in /config/, create a file named config.env. **Make sure this file is listed in the gitignore. This should not be published on Github.** This file should read:
