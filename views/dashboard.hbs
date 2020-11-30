@@ -21,7 +21,7 @@
         <tbody>
             {{#each jobs}}
             <tr>
-                <td><a href="/jobs/{{_id}}" onclick="visitPost()">{{title}}</a></td>
+                <td><a href="/jobs/{{_id}}">{{title}}</a></td>
                 <td class="desc">{{truncateBody (stripTags body)}}</td>
                 <td>{{user.displayName}}</td>
                 <td>{{formatDate createdAt 'LLL'}}</td>
@@ -69,15 +69,3 @@
     <a href="/jobs" class="btn btn-primary">Your Listings</a>
     {{/if}}
 </div>
-
-<script>
-    function visitPost(){
-        console.log("Event")
-        gtag('event', 'visitJob', {
-            'event_label' : {{title}},
-            'event_callback': function() {
-                console.log("Posted event")
-            }
-        });
-    }
-</script>
